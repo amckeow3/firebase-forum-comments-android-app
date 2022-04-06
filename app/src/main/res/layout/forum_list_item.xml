@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textViewForumTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCreator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewForumTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewForumTitle" />
+
+    <TextView
+        android:id="@+id/textViewForumDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewCreator"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCreator" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imageFilterViewTrash"
+        android:layout_width="34dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLikes"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewHeart"
+        app:layout_constraintTop_toTopOf="@+id/textViewLikes"
+        app:srcCompat="@drawable/rubbish_bin" />
+
+    <TextView
+        android:id="@+id/textViewLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="14dp"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewForumDescription"
+        app:layout_constraintTop_toBottomOf="@+id/textViewForumDescription" />
+
+    <ImageView
+        android:id="@+id/imageViewHeart"
+        android:layout_width="39dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageFilterViewTrash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageFilterViewTrash"
+        app:srcCompat="@drawable/like_not_favorite" />
+
+    <TextView
+        android:id="@+id/textViewDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLikes"
+        app:layout_constraintStart_toEndOf="@+id/textViewLikes"
+        app:layout_constraintTop_toTopOf="@+id/textViewLikes" />
+</androidx.constraintlayout.widget.ConstraintLayout>
